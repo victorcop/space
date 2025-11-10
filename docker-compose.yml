@@ -1,0 +1,47 @@
+# Docker Compose configuration for space CLI application
+version: '3.8'
+
+services:
+  space:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: space:latest
+    container_name: space-cli
+
+    # Environment variables (override with .env file)
+    environment:
+      - SPACE_API_BASE_URL=${SPACE_API_BASE_URL:-http://api.open-notify.org}
+      - SPACE_ASTROS_ENDPOINT=${SPACE_ASTROS_ENDPOINT:-/astros.json}
+
+    # Load environment from .env file
+    env_file:
+      - .env
+
+    # Network mode for API access
+    network_mode: bridge
+
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+
+    # Restart policy
+    restart: "no"
+
+  # Example: Run with verbose logging
+  space-verbose:
+    extends: space
+    container_name: space-cli-verbose
+    command: ["-v"]
+
+  # Example: Run with debug logging
+  space-debug:
+    extends: space
+    container_name: space-cli-debug
+    command: ["-d"]
