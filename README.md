@@ -1,7 +1,6 @@
 # Space 🚀
 
 [![CI](https://github.com/victorcop/space/actions/workflows/ci.yml/badge.svg)](https://github.com/victorcop/space/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/victorcop/space/actions/workflows/codeql.yml/badge.svg)](https://github.com/victorcop/space/actions/workflows/codeql.yml)
 [![codecov](https://codecov.io/gh/victorcop/space/branch/main/graph/badge.svg)](https://codecov.io/gh/victorcop/space)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -170,7 +169,6 @@ space/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml
-│       ├── codeql.yml
 │       └── release.yml
 ├── src/
 │   └── space/
