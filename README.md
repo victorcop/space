@@ -20,7 +20,6 @@ A Python CLI application that fetches and displays information about astronauts 
 - 🔄 Automatic retry with exponential backoff for transient failures
 - 🔒 Security scanning with pip-audit and bandit
 - 🎯 Pre-commit hooks for code quality enforcement
-- ♻️ Automated dependency updates via Dependabot
 
 ## Installation
 
