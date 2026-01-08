@@ -1,5 +1,14 @@
 # Space 🚀
 
+[![CI](https://github.com/victorcop/space/actions/workflows/ci.yml/badge.svg)](https://github.com/victorcop/space/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/victorcop/space/actions/workflows/codeql.yml/badge.svg)](https://github.com/victorcop/space/actions/workflows/codeql.yml)
+[![codecov](https://codecov.io/gh/victorcop/space/branch/main/graph/badge.svg)](https://codecov.io/gh/victorcop/space)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+
 A Python CLI application that fetches and displays information about astronauts currently in space.
 
 ## Features
