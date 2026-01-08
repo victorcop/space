@@ -6,12 +6,15 @@ from typing import Any, Dict, Generator
 
 import pytest
 
+# Set environment variables at module level, before pytest collects tests
+os.environ.setdefault("SPACE_API_BASE_URL", "http://api.open-notify.org")
+os.environ.setdefault("SPACE_ASTROS_ENDPOINT", "/astros.json")
 
-@pytest.fixture(scope="session", autouse=True)
-def setup_test_env() -> None:
-    """Set up environment variables for testing."""
-    os.environ["SPACE_API_BASE_URL"] = "http://api.open-notify.org"
-    os.environ["SPACE_ASTROS_ENDPOINT"] = "/astros.json"
+
+def pytest_configure(config):
+    """Pytest hook to configure environment before test collection."""
+    os.environ.setdefault("SPACE_API_BASE_URL", "http://api.open-notify.org")
+    os.environ.setdefault("SPACE_ASTROS_ENDPOINT", "/astros.json")
 
 
 @pytest.fixture
