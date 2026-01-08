@@ -1,9 +1,17 @@
 """Pytest configuration and fixtures."""
 
 import logging
+import os
 from typing import Any, Dict, Generator
 
 import pytest
+
+
+@pytest.fixture(scope="session", autouse=True)
+def setup_test_env() -> None:
+    """Set up environment variables for testing."""
+    os.environ["SPACE_API_BASE_URL"] = "http://api.open-notify.org"
+    os.environ["SPACE_ASTROS_ENDPOINT"] = "/astros.json"
 
 
 @pytest.fixture
